@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --trueblue: #0273DD;
+  --trueblue2: #1643A2;
+  --beer: #FD8C22;
+  --iceberg: #72A3CE;
+  --philippinesilver: #B7B6B7;
+  --ghostwhite: #FBFAF9;
+  --deepkoamaru: #293F6A;
+  --yankeesblue: #1F2937;
+  --sunray: #E9BC5D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(var(--deepkoamaru));
+  background-color: white;  
+}
+
+/* Default styling for larger screens */
+.parallax {
+  background-image: url("/background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Adjust background-size for small screens (max-width: 640px) */
+@media (max-width: 640px) {
+  .parallax {
+    background-size: 300%; /* Adjust the background size as needed */
+  }
+}
