@@ -1,17 +1,31 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "react-feather"
+import { useInView } from "react-intersection-observer";
 
 export default function CTA() {
+  // scroll animations
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Ensures the animation triggers only once
+    threshold: 0.5, // Adjust this threshold as needed
+  })
+
   return (
-    <section className="flex flex-col lg:flex-row mt-[50px] snap-center bg-yankeesblue">
+    <section 
+      ref={ref}
+      className={`transition ease-in-out duration-1000 scale-0 flex flex-col lg:flex-row mt-[50px] snap-center bg-yankeesblue ${
+        inView ? 'scale-100' : ''
+      }`}      >
       {/* Image */}
       <div className="flex">
         <Image
           src="/banner.png"
           alt="Image Banner"
           width={749}
-          height={546}
+          height={456}
+          priority
         />
       </div>
 

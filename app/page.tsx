@@ -1,5 +1,5 @@
 import Hero from '@/components/Hero'
-import Services from '@/components/Services'
+import ServicesCards from '@/components/ServicesCards'
 import Why from '@/components/Why'
 import CTA from '@/components/CTA'
 
@@ -8,7 +8,7 @@ export default function Home() {
     <>
     <main className="flex min-h-screen flex-col items-center justify-center p-6 lg:p-24 snap-y">
       <Hero />
-      <Services />
+      <ServicesCards />
       <Why />
     </main>
     <CTA />

@@ -21,7 +21,7 @@
 }
 
 body {
-  color: rgb(var(--deepkoamaru));
+  color: var(--yankeesblue);
   background-color: white;  
 }
 

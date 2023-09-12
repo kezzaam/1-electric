@@ -9,19 +9,19 @@ export default function Footer() {
         <nav>
             <ul className="flex space-x-6 ">
                 <li className={navLink}>
-                    <Link href="#">About</Link>
+                    <Link href="/about">About</Link>
                 </li>
                 <li className={navLink}>
-                    <Link href="#">Services</Link>
+                    <Link href="/services">Services</Link>
                 </li>
                 <li className={navLink}>
-                    <Link href="#">Contact</Link>
+                    <Link href="/contact">Contact</Link>
                 </li>
                 <li className={navLink}>
-                    <Link href="#">Join</Link>
+                    <Link href="/join">Join</Link>
                 </li>
                 <li className={navLink}>
-                    <Link href="#">Policies</Link>
+                    <Link href="/policies">Policies</Link>
                 </li>
             </ul>
         </nav>
@@ -43,7 +43,7 @@ export default function Footer() {
             </span>
         </section>
         <section>
-            <p className="text-xs">© 2023 1 Electric Ltd. Website by <span className={`${navLink} font-bold`}><Link href="#">moondog</Link></span></p>
+            <p className="text-xs">© 2023 1 Electric Ltd. Website by <span className={`${navLink} font-bold`}><Link href="https://moondog.co.nz">moondog</Link></span></p>
         </section>
     </footer>
   )

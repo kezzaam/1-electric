@@ -20,9 +20,13 @@ export default function Header() {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
-  // Function to toggle the dropdown menu.
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen)
+  // dropdown menu
+  const handleMouseEnter = () => {
+    setIsDropdownOpen(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsDropdownOpen(false)
   }
 
   return (
@@ -30,12 +34,12 @@ export default function Header() {
       <section className={inline}>
         {!isMobileMenuOpen && ( // Render the logo only if the mobile menu is closed
 
-          <Link href="#" className="hover:scale-100 lg:hover:scale-110 hover:transition-all scale-90 lg:scale-100">
+          <Link href="/" className="hover:scale-100 lg:hover:scale-110 hover:transition-all scale-90 lg:scale-100">
             <Image
               src="/wordmark.svg"
               alt="1 Electric Wordmark"
               width={160}
-              height={43}
+              height={47}
               priority
             />
           </Link>
@@ -44,43 +48,38 @@ export default function Header() {
         {/* Desktop menu */}
         <nav className="hidden lg:flex items-center ">
           <ul className="flex space-x-6">
-            <li className={`${navLink} relative`}>
-              <div
-                className="flex items-center cursor-pointer"
-                onMouseEnter={toggleDropdown} // Use onMouseEnter and onMouseLeave to handle hover
-                onMouseLeave={toggleDropdown}
-              >
-                <Link href="#">Services</Link>
-                <button>
-                  {isDropdownOpen ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
-                </button>
+          <li className={`${navLink} relative`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div className="flex items-center cursor-pointer">
+        <Link href="/services">Services</Link>
+        <button>
+          {isDropdownOpen ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
+        </button>
+      </div>
 
-
-                {/* Dropdown menu */}
-                {isDropdownOpen && (
-                  <ul className="absolute bg-white shadow text-base p-4 rounded mt-40 left-0 z-10">
-                    <li className={dropdownLink}>
-                      <Link href="#">Industrial</Link>
-                    </li>
-                    <li className={dropdownLink}>
-                      <Link href="#">Commercial</Link>
-                    </li>
-                    <li className={dropdownLink}>
-                      <Link href="#">Maintenance</Link>
-                    </li>
-                  </ul>
-                )}
-              </div>
-            </li>
+      {/* Dropdown menu */}
+      {isDropdownOpen && (
+        <ul className="absolute bg-white shadow text-base p-4 rounded left-0 z-10">
+          <li className={dropdownLink}>
+            <Link href="/services#">Industrial</Link>
+          </li>
+          <li className={dropdownLink}>
+            <Link href="/services#">Commercial</Link>
+          </li>
+          <li className={dropdownLink}>
+            <Link href="/services#">Maintenance</Link>
+          </li>
+        </ul>
+      )}
+    </li>
 
             <li className={navLink}>
-              <Link href="#">About</Link>
+              <Link href="/about">About</Link>
             </li>
             <li className={navLink}>
-              <Link href="#">Gallery</Link>
+              <Link href="/gallery">Gallery</Link>
             </li>
             <li className={navLink}>
-              <Link href="#">Join</Link>
+              <Link href="/join">Join</Link>
             </li>
           </ul>
         </nav>
@@ -93,14 +92,14 @@ export default function Header() {
           <span className="flex space-x-2 items-center"><Phone size={20} /><p>022 457 1594</p></span>
         </Link>
 
-        <Link href="#">
+        <Link href="/contact">
           <button className="bg-deepkoamaru hover:bg-metallicorange hover:font-bold border-2 border-trueblue hover:shadow transition-all hover:scale-105 py-2 px-6 rounded-xl hidden lg:flex">Contact Us</button>
         </Link>
       </section>
 
 
       {/* Display the hamburger menu icon on small screens */}
-      <div className="absolute right-6 top-6 lg:hidden transition-all">
+      <div className="absolute right-6 top-6 lg:hidden transition-all z-50">
         <button onClick={toggleMobileMenu}>
           {isMobileMenuOpen ? <XCircle size={24} /> : <Menu size={24} />}
         </button>
@@ -110,31 +109,31 @@ export default function Header() {
       {isMobileMenuOpen && (
         <nav className="lg:hidden w-[100%]">
           <ul className="flex flex-col space-y-4 pl-2 mb-6">
-          <li className={`${navLink} relative`}>
-                  <Link href="#">Services</Link>
-                  
-                  {/* No dropdown on mobile menu */}
-                  <ul className="text-sm rounded z-10 ml-4 mt-2 space-y-4">
-                    <li className={mobileDropdownLink}>
-                      <Link href="#">Industrial</Link>
-                    </li>
-                    <li className={mobileDropdownLink}>
-                      <Link href="#">Commercial</Link>
-                    </li>
-                    <li className={mobileDropdownLink}> 
-                      <Link href="#">Maintenance</Link>
-                    </li>
-                  </ul>
+            <li className={`${navLink} relative`}>
+              <Link href="/services">Services</Link>
+
+              {/* No dropdown on mobile menu */}
+              <ul className="text-sm rounded z-10 ml-4 mt-2 space-y-4">
+                <li className={mobileDropdownLink}>
+                  <Link href="/services#">Industrial</Link>
+                </li>
+                <li className={mobileDropdownLink}>
+                  <Link href="/services#">Commercial</Link>
+                </li>
+                <li className={mobileDropdownLink}>
+                  <Link href="/services#">Maintenance</Link>
+                </li>
+              </ul>
 
             </li>
             <li className={navLink}>
-              <Link href="#">About</Link>
+              <Link href="/about">About</Link>
             </li>
             <li className={navLink}>
-              <Link href="#">Gallery</Link>
+              <Link href="/gallery">Gallery</Link>
             </li>
             <li className={navLink}>
-              <Link href="#">Join</Link>
+              <Link href="/join">Join</Link>
             </li>
           </ul>
           <hr />
@@ -143,7 +142,7 @@ export default function Header() {
             <Link href="tel:+64224571594" className={`${navLink} items-center`}>
               <span className="flex space-x-1"><Phone size={20} /><p>022 457 1594</p></span>
             </Link>
-            <Link href="#" >
+            <Link href="/contact" >
               <button className="bg-deepkoamaru hover:bg-metallicorange border-2 border-trueblue hover:font-bold hover:shadow transition-all hover:scale-110 py-2 px-6 w-full mt-2 rounded-xl">Contact Us</button>
             </Link>
           </section>
