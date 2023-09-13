@@ -16,22 +16,22 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## TO DO
+## TASK LIST
 
-[x] Home
-[x] About
-[ ] Services
-[ ] Gallery
-[ ] Contact
-[ ] Join
-[ ] Policies
-[ ] Deploy to github pages staging environment and get feedback / content
-[ ] CMS integration - look at https://josipmisko.com/best-cms-next-js
-[ ] Under Construction / maintenance mode
-[ ] SSH certificate - let's encrypt
-[ ] Security
-[ ] SEO
-[ ] Deploy under test route for testing before launch
+- [x] Home
+- [x] About
+- [ ] Services
+- [ ] Gallery
+- [ ] Contact
+- [ ] Join
+- [ ] Policies
+- [ ] Deploy to github pages staging environment and get feedback / content
+- [ ] CMS integration - look at https://josipmisko.com/best-cms-next-js
+- [ ] Under Construction / maintenance mode
+- [ ] SSH certificate - let's encrypt
+- [ ] Security
+- [ ] SEO
+- [ ] Deploy under test route for testing before launch
 
 
 
