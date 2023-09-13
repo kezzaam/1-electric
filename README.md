@@ -14,21 +14,24 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## TO DO
 
-To learn more about Next.js, take a look at the following resources:
+[x] Home
+[x] About
+[ ] Services
+[ ] Gallery
+[ ] Contact
+[ ] Join
+[ ] Policies
+[ ] Deploy to github pages staging environment and get feedback / content
+[ ] CMS integration - look at https://josipmisko.com/best-cms-next-js
+[ ] Under Construction / maintenance mode
+[ ] SSH certificate - let's encrypt
+[ ] Security
+[ ] SEO
+[ ] Deploy under test route for testing before launch
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
