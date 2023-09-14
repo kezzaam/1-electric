@@ -9,7 +9,7 @@ export default function Contact() {
     <div className="flex flex-col lg:flex-row justify-center space-y-4 lg:space-y-0 lg:space-x-4">
 <h3>Enquire or Request a Quote</h3>
 
-    </div><div>Contact form and or Quote form, link to careers / join</div>
+    </div><div>Contact form and or Quote form, link to careers / join, map showing service area</div>
   </section>  
   )
 }

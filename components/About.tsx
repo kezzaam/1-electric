@@ -7,9 +7,10 @@ export default function About() {
         <>       
         <div className="flex pt-[95px] bg-cover w-auto h-[55vh] bg-[url('/bayofplenty.jpg')]">                
         </div>
-        <main className="flex min-h-screen flex-col items-center justify-center p-6 lg:p-24 snap-y">
-            <section className=" min-h-screen flex flex-col items-center text-center snap-center space-y-6">
+        <main className="flex min-h-screen flex-col items-center justify-center p-6 lg:px-24 lg:py-12 snap-y">
+            <section className=" min-h-screen flex flex-col items-center text-center snap-center space-y-10">
 
+                {/* heading, title, description */}
                 <div>
                     <h4 className="text-sm uppercase text-trueblue tracking-wide my-4">We are 1 Electric</h4>
                     <h2 className="text-3xl font-bold text-center mb-4">About Us</h2>
@@ -19,8 +20,13 @@ export default function About() {
                     </p>
                 </div>
 
+                {/* divider */}
                 <div className="w-36 h-1 mb-10 bg-trueblue"></div>
+
+                {/* heading */}
                 <h2 className="text-3xl font-bold text-center mb-4">Meet Our Team</h2>
+
+                {/* profile cards section */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4">
                     <ProfileCard
                         name="Shane Elliot"

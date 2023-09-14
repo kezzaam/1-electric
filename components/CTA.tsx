@@ -41,10 +41,10 @@ export default function CTA() {
           condimentum id viverra nulla.
         </p>
         <div className="flex flex-col space-y-4 text-yankeesblue">
-          <Link href="#" className="bg-ghostwhite py-2 px-4 rounded hover:bg-trueblue hover:text-white transition-all hover:scale-105">
+          <Link href="#" className="bg-ghostwhite p-4 rounded hover:bg-trueblue hover:text-white transition-all hover:scale-105">
           <span className="flex items-center justify-center space-x-2"><p>Gallery</p><ArrowRight size={20} /></span>
           </Link>
-          <Link href="#" className="bg-ghostwhite py-2 px-4 rounded hover:bg-trueblue hover:text-white transition-all hover:scale-105">
+          <Link href="#" className="bg-ghostwhite p-4 rounded hover:bg-trueblue hover:text-white transition-all hover:scale-105">
           <span className="flex items-center justify-center space-x-2"><p>Get a Quote</p><ArrowRight size={20} /></span>
           </Link>
         </div>

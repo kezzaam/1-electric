@@ -60,13 +60,13 @@ export default function Header() {
       {isDropdownOpen && (
         <ul className="absolute bg-white shadow text-base p-4 rounded left-0 z-10">
           <li className={dropdownLink}>
-            <Link href="/services#">Industrial</Link>
+            <Link href="/services#industrial">Industrial</Link>
           </li>
           <li className={dropdownLink}>
-            <Link href="/services#">Commercial</Link>
+            <Link href="/services#commercial">Commercial</Link>
           </li>
           <li className={dropdownLink}>
-            <Link href="/services#">Maintenance</Link>
+            <Link href="/services#maintenance">Maintenance</Link>
           </li>
         </ul>
       )}
@@ -110,39 +110,39 @@ export default function Header() {
         <nav className="lg:hidden w-[100%]">
           <ul className="flex flex-col space-y-4 pl-2 mb-6">
             <li className={`${navLink} relative`}>
-              <Link href="/services">Services</Link>
+              <Link href="/services" onClick={toggleMobileMenu}>Services</Link>
 
               {/* No dropdown on mobile menu */}
               <ul className="text-sm rounded z-10 ml-4 mt-2 space-y-4">
                 <li className={mobileDropdownLink}>
-                  <Link href="/services#">Industrial</Link>
+                  <Link href="/services#industrial" onClick={toggleMobileMenu}>Industrial</Link>
                 </li>
                 <li className={mobileDropdownLink}>
-                  <Link href="/services#">Commercial</Link>
+                  <Link href="/services#commercial" onClick={toggleMobileMenu}>Commercial</Link>
                 </li>
                 <li className={mobileDropdownLink}>
-                  <Link href="/services#">Maintenance</Link>
+                  <Link href="/services#maintenance" onClick={toggleMobileMenu}>Maintenance</Link>
                 </li>
               </ul>
 
             </li>
             <li className={navLink}>
-              <Link href="/about">About</Link>
+              <Link href="/about" onClick={toggleMobileMenu}>About</Link>
             </li>
             <li className={navLink}>
-              <Link href="/gallery">Gallery</Link>
+              <Link href="/gallery" onClick={toggleMobileMenu}>Gallery</Link>
             </li>
             <li className={navLink}>
-              <Link href="/join">Join</Link>
+              <Link href="/join" onClick={toggleMobileMenu}>Join</Link>
             </li>
           </ul>
           <hr />
           {/* phone number and button */}
           <section className="flex flex-col pl-2 text-sm py-2">
-            <Link href="tel:+64224571594" className={`${navLink} items-center`}>
+            <Link href="tel:+64224571594" className={`${navLink} items-center`} onClick={toggleMobileMenu}>
               <span className="flex space-x-1"><Phone size={20} /><p>022 457 1594</p></span>
             </Link>
-            <Link href="/contact" >
+            <Link href="/contact" onClick={toggleMobileMenu}>
               <button className="bg-deepkoamaru hover:bg-metallicorange border-2 border-trueblue hover:font-bold hover:shadow transition-all hover:scale-110 py-2 px-6 w-full mt-2 rounded-xl">Contact Us</button>
             </Link>
           </section>
