@@ -20,7 +20,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 - [x] Home
 - [x] About
-- [ ] Services
+- [x] Services
 - [ ] Gallery
 - [ ] Contact
 - [ ] Join

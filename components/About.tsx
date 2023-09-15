@@ -1,14 +1,15 @@
 
 import ProfileCard from "./ProfileCard"
 import CTA from "./CTA"
+import Testimonials from "./Testimonials"
 
 export default function About() {
     return (
         <>       
         <div className="flex pt-[95px] bg-cover w-auto h-[55vh] bg-[url('/bayofplenty.jpg')]">                
         </div>
-        <main className="flex min-h-screen flex-col items-center justify-center p-6 lg:px-24 lg:py-12 snap-y">
-            <section className=" min-h-screen flex flex-col items-center text-center snap-center space-y-10">
+        <main className="flex flex-col items-center justify-center p-6 lg:px-24 lg:py-12 snap-y">
+            <section className="flex flex-col items-center text-center snap-center space-y-10">
 
                 {/* heading, title, description */}
                 <div>
@@ -66,6 +67,7 @@ export default function About() {
                 </div>
             </section>
             </main>
+            <Testimonials />
             <CTA />
             </>
     )
