@@ -22,9 +22,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - [x] About
 - [x] Services
 - [x] Gallery
-- [ ] Contact
-- [ ] Join
-- [ ] Policies
+- [x] Contact
+- [x] Join - prototype - need to check with client on needs
+- [x] Policies - prototype - need to check with client on needs
 - [ ] Deploy to github pages staging environment and get feedback / content
 - [ ] CMS integration - look at https://josipmisko.com/best-cms-next-js
 - [ ] Under Construction / maintenance mode

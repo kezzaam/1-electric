@@ -38,7 +38,7 @@ export default function ContactForm() {
     const buttonStyle = "bg-trueblue hover:bg-metallicorange hover:scale-105 hover:transition-all text-white font-bold p-4 rounded focus:outline-none focus:shadow-outline"
     const inputStyle = "focus:border-2 border-trueblue rounded p-4 focus:outline-none focus:shadow-outline"
     const paginationStyle = "text-trueblue font-bold hover:text-metallicorange hover:scale-105 hover:transition-all"
-    const radioLabelStyle = "relative cursor-pointer user-select-none transition-colors duration-200 group bg-deepkoamaru text-white p-4 font-bold hover:bg-metallicorange"
+    const radioLabelStyle = "relative cursor-pointer user-select-none transition-colors duration-200 group bg-deepkoamaru text-white p-4 font-bold hover:bg-metallicorange rounded"
     const radioInputStyle = "absolute opacity-0 left-0 top-0 cursor-pointer"
 
     // Render form based on the current step

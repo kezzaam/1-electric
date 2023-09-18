@@ -44,7 +44,7 @@ const Testimonials = () => {
       <div className="w-36 h-1 mb-10 bg-trueblue"></div>
       {/* testimonial */}
       <div className="text-center">
-        <p className="text-xl mb-4">{testimonials[currentTestimonial].quote}</p>
+        <p className="text-xl italic mb-4">{testimonials[currentTestimonial].quote}</p>
         <div className="flex items-center justify-center">
           <div>
             <p className="font-semibold">{testimonials[currentTestimonial].name}</p>
