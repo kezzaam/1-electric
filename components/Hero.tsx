@@ -50,7 +50,7 @@ export default function Hero() {
                 <div className="flex flex-col space-y-8 mt-60 lg:mt-0 max-w-2xl">
                     <div>
                         <h1 className="text-white text-4xl lg:text-6xl font-bold py-6">A great heading<br /><span className="text-trueblue">goes right here</span></h1>
-                        <p className="text-white text-lg lg:text-xl transition-all">Anim aute id magna aliqua ad ad non deserunt sunt <Link href="/#what" className="text-trueblue hover:text-metallicorange">our services</Link>. Qui irure qui lorem cupidatat commodo <Link href="/#why" className="text-trueblue hover:text-metallicorange">why</Link>. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.</p>
+                        <p className="text-white text-lg lg:text-xl transition-all">Anim aute id magna aliqua ad ad non deserunt sunt <Link href="/#what" className="text-trueblue hover:text-metallicorange" passHref>our services</Link>. Qui irure qui lorem cupidatat commodo <Link href="/#why" className="text-trueblue hover:text-metallicorange" passHref>why</Link>. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.</p>
                     </div>
                     <div>
                         <button className="bg-deepkoamaru rounded-full p-2 hover:transition-all hover:tracking-wider active:tracking-normal">

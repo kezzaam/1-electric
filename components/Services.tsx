@@ -3,7 +3,6 @@ import Image from 'next/image'
 import CTA from './CTA'
 import { CheckCircle } from 'react-feather'
 import Testimonials from './Testimonials'
-import { useInView } from "react-intersection-observer"
 
 export default function Services() {
   
