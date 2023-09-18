@@ -2,7 +2,7 @@ import ServiceCard from './ServiceCard'
 
 export default function ServicesCards() {
   return (
-    <section className="mt-[96px] flex flex-col items-center justify-center snap-center">
+    <section id="what" className="mt-[96px] flex flex-col items-center justify-center snap-center">
       {/* heading, title, description */}
       <div>
         <h4 className="text-sm uppercase text-trueblue tracking-wide my-4 text-center">What we do</h4>

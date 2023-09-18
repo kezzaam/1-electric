@@ -29,6 +29,11 @@ export default function Header() {
     setIsDropdownOpen(false)
   }
 
+    // Function to toggle the mobile menu.
+    const toggleDropdown = () => {
+      setIsDropdownOpen(!isDropdownOpen)
+    }
+
   return (
     <header className="fixed w-screen flex flex-row bg-trueblue text-white p-6 justify-between z-50 shadow">
       <section className={inline}>
@@ -60,13 +65,13 @@ export default function Header() {
       {isDropdownOpen && (
         <ul className="absolute bg-white shadow text-base p-4 rounded left-0 z-10">
           <li className={dropdownLink}>
-            <Link href="/services#industrial">Industrial</Link>
+            <Link href="/services#industrial" onClick={toggleDropdown}>Industrial</Link>
           </li>
           <li className={dropdownLink}>
-            <Link href="/services#commercial">Commercial</Link>
+            <Link href="/services#commercial" onClick={toggleDropdown}>Commercial</Link>
           </li>
           <li className={dropdownLink}>
-            <Link href="/services#maintenance">Maintenance</Link>
+            <Link href="/services#maintenance" onClick={toggleDropdown}>Maintenance</Link>
           </li>
         </ul>
       )}

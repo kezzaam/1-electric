@@ -21,7 +21,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - [x] Home
 - [x] About
 - [x] Services
-- [ ] Gallery
+- [x] Gallery
 - [ ] Contact
 - [ ] Join
 - [ ] Policies

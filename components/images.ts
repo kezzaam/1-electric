@@ -198,3 +198,9 @@ export const images: CustomImage[] = [
     caption: "A photo by Matthew Wiebe. (unsplash.com)",
   },
 ];
+
+// Multiply width and height by 3 for all images except the first one
+for (let i = 0; i < images.length; i++) {
+  images[i].width *= 3;
+  images[i].height *= 3;
+}

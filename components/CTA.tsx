@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "react-feather"
-import { useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer"
 
 export default function CTA() {
   // scroll animations

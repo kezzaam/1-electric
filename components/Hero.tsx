@@ -1,8 +1,10 @@
 "use client"
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { ArrowRight } from 'react-feather'
+import Credentials from './Credentials'
 
 export default function Hero() {
     // for parallax background
@@ -48,7 +50,7 @@ export default function Hero() {
                 <div className="flex flex-col space-y-8 mt-60 lg:mt-0 max-w-2xl">
                     <div>
                         <h1 className="text-white text-4xl lg:text-6xl font-bold py-6">A great heading<br /><span className="text-trueblue">goes right here</span></h1>
-                        <p className="text-white text-lg lg:text-xl">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.</p>
+                        <p className="text-white text-lg lg:text-xl transition-all">Anim aute id magna aliqua ad ad non deserunt sunt <Link href="/#what" className="text-trueblue hover:text-metallicorange">our services</Link>. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.</p>
                     </div>
                     <div>
                         <button className="bg-deepkoamaru rounded-full p-2 hover:transition-all hover:tracking-wider active:tracking-normal">
@@ -59,15 +61,8 @@ export default function Hero() {
                             </span> 
                         </button>
                     </div>
-                    <div className="text-philippinesilver">
-                        <h2 className="uppercase tracking-wide pb-2">Certified Master Electricians</h2>
-                        <span className="flex items-center justify-between flex-wrap space-y-4">
-                            <Image src="/cert-01.png" alt="Master Electricians Logo" width={130} height={43} />
-                            <Image src="/cert-02.png" alt="Master Electricians Logo" width={140} height={24} />
-                            <Image src="/cert-03.png" alt="Master Electricians Logo" width={140} height={40} />
-                            <Image src="/cert-04.png" alt="Master Electricians Logo" width={130} height={57} />
-                        </span>
-                    </div>
+                    <Credentials />
+
                 </div>
 
                 <div className="p-10 hidden lg:flex">

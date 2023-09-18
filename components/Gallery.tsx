@@ -5,7 +5,7 @@ import { Gallery } from "react-grid-gallery"
 import Lightbox from "yet-another-react-lightbox"
 import "yet-another-react-lightbox/styles.css"
 import { images, CustomImage } from "./images"
-import CTA from "./CTA"
+import CTA2 from "./CTA2"
 import Testimonials from "./Testimonials"
 
 
@@ -14,10 +14,10 @@ type FilterButton = {
   value: string
 }
 
-const slides = images.map(({ original }) => ({
+const slides = images.map(({ original, width, height }) => ({
   src: original,
-  width: parseInt('90%'),
-  height: parseInt('auto'),
+  width,
+  height,
 }))
 
 export default function App() {
@@ -102,7 +102,7 @@ export default function App() {
         />
       </div>
       <Testimonials />
-      <CTA />
+      <CTA2 />
     </>
 
   )

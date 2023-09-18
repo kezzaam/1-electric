@@ -3,8 +3,10 @@ import Image from 'next/image'
 import CTA from './CTA'
 import { CheckCircle } from 'react-feather'
 import Testimonials from './Testimonials'
+import { useInView } from "react-intersection-observer"
 
 export default function Services() {
+  
   // service data
   const services = [
     {
@@ -41,7 +43,7 @@ export default function Services() {
 
   return (
     <>
-      <div className="flex pt-[95px] bg-cover w-auto h-[55vh] bg-[url('/testing-image.jpg')]">
+      <div className="flex bg-cover w-auto h-[55vh] bg-[url('/testing-image.jpg')]">
       </div>
       <main className="flex flex-col items-center justify-center p-6 lg:p-24 snap-y">
         <section className="text-center snap-center space-y-10">
@@ -65,12 +67,13 @@ export default function Services() {
         href={`#${service.heading.toLowerCase()}`} // Unique href based on service name
         passHref // Ensure the Link component passes href to the <a> tag
       >
+         
         <section
           id={service.heading.toLowerCase()} 
           key={index}
           className={`${
             index % 2 === 0 ? 'bg-ghostwhite' : 'bg-deepkoamaru text-white'
-          } flex flex-col lg:flex-row shadow hover:scale-105 hover:transition-all`}
+          } flex flex-col lg:flex-row shadow hover:scale-105 hover:transition-all snap-center scroll-mt-24 items-center`}
         >
           {/* Image column */}
           <div className={`lg:order-${index % 2 === 0 ? '1' : '2'}`}>
