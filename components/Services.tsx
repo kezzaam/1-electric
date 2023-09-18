@@ -97,7 +97,7 @@ export default function Services() {
                 </li>
               ))}
             </ul>
-            <button className="bg-trueblue rounded-lg p-4 mt-10 text-white text-xl font-bold hover:bg-metallicorange hover:scale-105 hover:transition-all">Find out more</button>
+            <Link href="/contact"><button className="bg-trueblue rounded-lg p-4 mt-10 text-white text-xl font-bold hover:bg-metallicorange hover:scale-105 hover:transition-all">Find out more</button></Link>
           </div>
         </section>
         </Link>
