@@ -5,7 +5,7 @@ import { CheckCircle } from 'react-feather'
 import Testimonials from './Testimonials'
 
 export default function Services() {
-  
+
   // service data
   const services = [
     {
@@ -62,43 +62,41 @@ export default function Services() {
       {/* Service sections */}
       {services.map((service, index) => (
         <Link
-        key={index}
-        href={`#${service.heading.toLowerCase()}`} // Unique href based on service name
-        passHref // Ensure the Link component passes href to the <a> tag
-      >
-         
-        <section
-          id={service.heading.toLowerCase()} 
           key={index}
-          className={`${
-            index % 2 === 0 ? 'bg-ghostwhite' : 'bg-deepkoamaru text-white'
-          } flex flex-col lg:flex-row shadow hover:scale-105 hover:transition-all snap-center scroll-mt-24 items-center`}
+          href={`#${service.heading.toLowerCase()}`} // Unique href based on service name
         >
-          {/* Image column */}
-          <div className={`lg:order-${index % 2 === 0 ? '1' : '2'}`}>
-            <Image
-              src={service.image}
-              alt={service.heading}
-              width={1000}
-              height={1000}
-              className="object-cover"
-            />
-          </div>
-          {/* Information column */}
-          <div className={`lg:w-1/2 lg:order-${index % 2 === 0 ? '2' : '1'} flex flex-col p-8 lg:p-24`}>
-            <h3 className="text-2xl font-semibold mb-2">{service.heading}</h3>
-            <p className="mb-4">{service.description}</p>
-            <ul className="ml-6 space-y-4">
-              {service.bulletPoints.map((point, index) => (
-                <li key={index} className="flex items-center space-x-2 text-metallicorange">
-                  <CheckCircle />
-                  <p>{point}</p>
-                </li>
-              ))}
-            </ul>
-            <Link href="/contact"><button className="bg-trueblue rounded-lg p-4 mt-10 text-white text-xl font-bold hover:bg-metallicorange hover:scale-105 hover:transition-all w-full">Find out more</button></Link>
-          </div>
-        </section>
+
+          <section
+            key={index}
+            id={service.heading.toLowerCase().replace(' ', '-')} // Unique ID based on service name
+            className={`${index % 2 === 0 ? 'bg-ghostwhite' : 'bg-deepkoamaru text-white'
+              } flex flex-col lg:flex-row shadow hover:scale-105 hover:transition-all snap-center scroll-mt-24 items-center`}
+          >
+            {/* Image column */}
+            <div className={`lg:w-1/2 lg:order-${index % 2 === 0 ? '2' : '1'}`}>
+              <Image
+                src={service.image}
+                alt={service.heading}
+                width={1000}
+                height={1000}
+                className="object-cover"
+              />
+            </div>
+            {/* Information column */}
+            <div className={`lg:w-1/2 lg:order-${index % 2 === 0 ? '1' : '2'} flex flex-col p-8 lg:p-24`}>
+              <h3 className="text-2xl font-semibold mb-2">{service.heading}</h3>
+              <p className="mb-4">{service.description}</p>
+              <ul className="ml-6 space-y-4">
+                {service.bulletPoints.map((point, index) => (
+                  <li key={index} className="flex items-center space-x-2 text-metallicorange">
+                    <CheckCircle />
+                    <p>{point}</p>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact"><button className="bg-trueblue rounded-lg p-4 mt-10 text-white text-xl font-bold hover:bg-metallicorange hover:scale-105 hover:transition-all w-full">Find out more</button></Link>
+            </div>
+          </section>
         </Link>
       ))}
       <Testimonials />
