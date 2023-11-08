@@ -35,7 +35,7 @@ export default function Header() {
     }
 
   return (
-    <header className="fixed w-screen flex flex-row bg-trueblue text-white p-6 justify-between z-50 shadow">
+    <header className="fixed w-screen flex flex-row bg-trueblue text-white p-6 justify-between z-40 shadow">
       <section className={inline}>
         {!isMobileMenuOpen && ( // Render the logo only if the mobile menu is closed
 
