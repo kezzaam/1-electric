@@ -49,14 +49,14 @@ export default function Hero() {
             <section className="relative h-screen w-full flex items-center justify-around -mt-[96px] snap-center">
                 <div className="flex flex-col space-y-8 mt-60 lg:mt-0 max-w-2xl">
                     <div>
-                        <h1 className="text-white text-4xl lg:text-6xl font-bold py-6">A great heading<br /><span className="text-trueblue">goes right here</span></h1>
-                        <p className="text-white text-lg lg:text-xl transition-all">Anim aute id magna aliqua ad ad non deserunt sunt <Link href="/#what" className="text-trueblue hover:text-metallicorange" passHref>our services</Link>. Qui irure qui lorem cupidatat commodo <Link href="/#why" className="text-trueblue hover:text-metallicorange" passHref>why</Link>. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.</p>
+                        <h1 className="text-white text-4xl lg:text-6xl font-bold py-6">Need an<br /><span className="text-trueblue text-shadow-lg">Electrician?</span></h1>
+                        <p className="text-white text-xl lg:text-xl transition-all">We are a locally owned and operated business servicing the Bay of Plenty Region, specialising in heavy industrial, industrial and commercial electrical.  Whether your job is big or small we provide the solutions to meet your needs.  We take pride in providing top quality service and workmanship to every single client.</p>
                     </div>
                     <div>
                         <button className="bg-deepkoamaru rounded-full p-2 hover:transition-all hover:tracking-wider active:tracking-normal">
                             <span className="flex text-white text-sm items-center space-x-2 pr-2">
                                 <div className="bg-trueblue rounded-full py-2 px-4 uppercase ">Featured</div>
-                                <p>Link to something you want to showcase</p>
+                                <p>See our latest work</p>
                                 <ArrowRight />
                             </span> 
                         </button>

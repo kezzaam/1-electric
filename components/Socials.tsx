@@ -13,7 +13,7 @@ export default function Socials() {
                     <Facebook />
                 </Link>
             </span>
-            <span className={navLink}>
+            {/* <span className={navLink}>
                 <Link href="#">
                     <Instagram />
                 </Link>
@@ -22,7 +22,7 @@ export default function Socials() {
                 <Link href="#">
                     <Twitter />
                 </Link>
-            </span>
+            </span> */}
         </section>
     )
 }

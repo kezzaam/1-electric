@@ -35,10 +35,8 @@ export default function CTA() {
           Honest, Reliable, Quality
         </h4>
         <h2 className="text-3xl font-bold mb-4">See for yourself</h2>
-        <p className="text-base mb-6">
-          Phasellus lorem quam molestie id quisque diam aenean nulla in.
-          Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
-          condimentum id viverra nulla.
+        <p className="text-xl mb-6">
+        Have a question or need a quote? We would love to hear from you to discuss your electrical needs.
         </p>
         <div className="flex flex-col space-y-4 text-yankeesblue">
           <Link href="/gallery" className="bg-ghostwhite p-4 rounded hover:bg-trueblue hover:text-white transition-all hover:scale-105">

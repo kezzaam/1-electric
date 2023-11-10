@@ -11,31 +11,39 @@ export default function Services() {
     {
       image: '/industrial-image.jpg',
       heading: 'Industrial',
-      description: 'Description of Service.',
+      description: 'Experienced in working with large industrial sites in the Bay of Plenty on a range of electrical solutions',
       bulletPoints: [
-        'Bullet point 1',
-        'Bullet point 2',
-        'Bullet point 3',
+        'Power distribution',
+        'Lighting',
+        'Maintenance',
+        'Breakdown and Repairs',
+        'Emergency lighting',
+        'Backup power supplies',
+        'Shutdowns',
+        'Integrations',
+        'Machine control and safety systems'
       ],
     },
     {
       image: '/commercial-image.jpg',
       heading: 'Commercial',
-      description: 'Description of Service.',
+      description: 'Expert advice working with our commercial partners in the Bay of Plenty on new fit outs and upgrades, design and installation.',
       bulletPoints: [
-        'Bullet point 1',
-        'Bullet point 2',
-        'Bullet point 3',
+        'New builds',
+        'Alterations',
+        'Lighting design and installation',
+        'Mechanical wiring',
+        'Temporary power supplies'
       ],
     },
     {
       image: '/maintenance-image.jpg',
-      heading: 'Maintenance',
-      description: 'Description of Service.',
+      heading: 'Residential',
+      description: 'Providing a professional service and high quality workmanship in all aspects of residential electrical work.',
       bulletPoints: [
-        'Bullet point 1',
-        'Bullet point 2',
-        'Bullet point 3',
+        'Renovations',
+        'Home automation',
+        'Switchboard upgrades'
       ],
     },
   ]

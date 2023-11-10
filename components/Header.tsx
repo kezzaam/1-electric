@@ -71,7 +71,7 @@ export default function Header() {
             <Link href="/services#commercial" onClick={toggleDropdown}>Commercial</Link>
           </li>
           <li className={dropdownLink}>
-            <Link href="/services#maintenance" onClick={toggleDropdown}>Maintenance</Link>
+            <Link href="/services#residential" onClick={toggleDropdown}>Residential</Link>
           </li>
         </ul>
       )}
@@ -126,7 +126,7 @@ export default function Header() {
                   <Link href="/services#commercial" onClick={toggleMobileMenu}>Commercial</Link>
                 </li>
                 <li className={mobileDropdownLink}>
-                  <Link href="/services#maintenance" onClick={toggleMobileMenu}>Maintenance</Link>
+                  <Link href="/services#residential" onClick={toggleMobileMenu}>Residential</Link>
                 </li>
               </ul>
 

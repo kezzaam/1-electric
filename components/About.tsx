@@ -14,12 +14,13 @@ export default function About() {
             image: '/shane.jpg',
             firstname: 'Shane',
             lastname: 'Elliot',
-            position: 'Position here',
-            description: 'A paragraph about Shane here',
+            position: 'Owner | Registered Electrician',
+            description: '',
             skills: [
-                'Skill 1',
-                'Skill 2',
-                'Skill 3',
+                'Honest and Reliable',
+                'Proven track record',
+                'Great communication',
+                'Excellent service'
             ],
             email: "shane@1electric.com",
         },
@@ -36,10 +37,19 @@ export default function About() {
                     <div>
                         <h4 className="text-sm uppercase text-trueblue tracking-wide my-4">We are 1 Electric</h4>
                         <h2 className="text-3xl font-bold text-center mb-4">About Us</h2>
-                        <p className="text-xl text-center mb-8 max-w-2xl">
-                            We are a locally owned and operated business servicing the Bay of Plenty Region, specialising in heavy industrial, industrial and commercial electrical.
-                            With a key group of experienced and qualified electricians our focus is dependable innovation and robust electrical installations in the industrial and commercial sector.
-                        </p>
+                        <div className="text-xl mb-8 max-w-4xl space-y-6">
+                        <p>1 Electric is owned and operated by Shane Elliott, registered electrician.</p>
+                        <p>Shane grew up in the Waikato on a dairy farm and has the great kiwi number 8 wire can do attitude, ingenuity and resourcefulness.</p> 
+                        
+                        <p>Shane has a wide range of previous experience including appliance repairs and installations, milk and water pump technician and electrical work specialising in industrial and heavy industrial work.</p> 
+                        
+                        <p>Shane moved to the sunny Bay of Plenty with his family and has been working as an electrician in the Bay since 2016.</p> 
+                        
+                        <p>Shane and the 1 electric team pride themselves with keeping up to date with the latest technology, rules and regulations and licensing requirements to ensure that they can carry out all projects safely and efficiently.</p> 
+
+                        <p>We are a member of ECANZ (Electrical Contractors Association of New Zealand) and are certified Master Electricians.This means you can be assured of the quality of our work and that we are experts in what we do. All our work is guaranteed.</p>
+                        
+                        </div>
                     </div>
 
                     {/* divider */}
