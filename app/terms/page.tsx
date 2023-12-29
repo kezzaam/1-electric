@@ -1,4 +1,4 @@
-import Policies from '@/components/Policies'
+import Policies from '@/components/Terms'
 
 export default function page() {
   return (

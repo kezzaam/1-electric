@@ -5,6 +5,7 @@ import Testimonials from "./Testimonials"
 import Link from "next/link"
 import Image from "next/image"
 import { CheckCircle } from "react-feather"
+import Mount from "./Mount"
 
 export default function About() {
 
@@ -13,7 +14,7 @@ export default function About() {
         {
             image: '/shane.jpg',
             firstname: 'Shane',
-            lastname: 'Elliot',
+            lastname: 'Elliott',
             position: 'Owner | Registered Electrician',
             description: '',
             skills: [
@@ -28,8 +29,7 @@ export default function About() {
 
     return (
         <>
-            <div className="flex pt-[95px] bg-cover w-auto h-[55vh] bg-[url('/bayofplenty.jpg')]">
-            </div>
+            <Mount />
             <main className="flex flex-col items-center justify-center p-6 lg:px-24 lg:py-12 snap-y">
                 <section className="flex flex-col items-center text-center snap-center space-y-10">
 

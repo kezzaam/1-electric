@@ -21,7 +21,7 @@ export default function Footer() {
                     <Link href="/join">Join</Link>
                 </li>
                 <li className={navLink}>
-                    <Link href="/policies">Policies</Link>
+                    <Link href="/terms">Terms</Link>
                 </li>
             </ul>
         </nav>

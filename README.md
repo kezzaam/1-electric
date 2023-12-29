@@ -25,7 +25,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - [x] Contact
 - [x] Join - prototype - need to check with client on needs
 - [x] Policies - prototype - need to check with client on needs
-- [ ] Deploy to github pages staging environment and get feedback / content
+- [x] Deploy to github pages staging environment and get feedback / content
 - [ ] CMS integration - look at https://josipmisko.com/best-cms-next-js
 - [ ] Under Construction / maintenance mode
 - [ ] SSH certificate - let's encrypt

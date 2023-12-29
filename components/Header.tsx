@@ -114,6 +114,9 @@ export default function Header() {
       {isMobileMenuOpen && (
         <nav className="lg:hidden w-[100%]">
           <ul className="flex flex-col space-y-4 pl-2 mb-6">
+            <li className={navLink}>
+              <Link href="/" onClick={toggleMobileMenu}>Home</Link>
+            </li>
             <li className={`${navLink} relative`}>
               <Link href="/services" onClick={toggleMobileMenu}>Services</Link>
 

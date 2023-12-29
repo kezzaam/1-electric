@@ -1,11 +1,11 @@
 import CTA from '@/components/CTA'
 import Testimonials from '@/components/Testimonials'
+import Mount from './Mount'
 
 export default function Join() {
   return (
     <>
-      <div className="flex pt-[95px] bg-cover w-auto h-[55vh] bg-[url('/bayofplenty.jpg')]">
-      </div>
+      <Mount />
       <main className="flex flex-col items-center justify-center p-6 lg:px-24 lg:py-12 snap-y">
         <section className="flex flex-col items-center text-center snap-center space-y-10">
 
@@ -19,16 +19,12 @@ export default function Join() {
               <p>We look for an experienced Industrial Electrician with great problem solving skills and a willingness to learn and to teach apprentices. Excellent communication with all of our team and stakeholders is a must.  The perfect fit for our team is someone who is honest, reliable with great work ethic and an ability to self manage and work independently.</p>
 
               <p>You would need a current practicing license and a current drivers license. Working at heights and <span title="Mobile Elevating Work Platform">MEWP</span> certification is a bonus however we can provide necessary training for the right person.</p>
-              <p>If you think you’ve got what it takes please email us your CV <a href="mailto:admin@1electric.nz">admin@1electric.nz</a> telling us a bit about yourself and we’ll get in touch.</p>
+              <p>If you think you’ve got what it takes please email us your CV <a className="text-trueblue hover:text-metallicorange" href="mailto:admin@1electric.nz">admin@1electric.nz</a> telling us a bit about yourself and we’ll get in touch.</p>
 
             </div>
           </div>
 
-          {/* divider */}
-          <div className="w-36 h-1 mb-10 bg-trueblue"></div>
-
-          {/* form section */}
-          Form goes here
+          {/* form section - if needed later */}
 
         </section>
       </main>

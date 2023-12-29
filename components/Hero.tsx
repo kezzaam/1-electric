@@ -39,15 +39,15 @@ export default function Hero() {
         <>
             {/* Parallax background container */}
             <div
-                className="parallax absolute inset-0 z-[-1]"
+                className="parallax absolute inset-0 z-[-1] h-[140vh] lg:h-[100vh]"
                 style={{
                     backgroundPosition: `center ${backgroundPositionY}px`, // Apply the parallax effect here
                 }}
             >
             </div>
 
-            <section className="relative h-screen w-full flex items-center justify-around -mt-[96px] snap-center">
-                <div className="flex flex-col space-y-8 mt-60 lg:mt-0 max-w-2xl">
+            <section className="relative min-h-screen w-full flex items-center justify-around snap-center">
+                <div className="flex flex-col space-y-8 max-w-2xl">
                     <div>
                         <h1 className="text-white text-4xl lg:text-6xl font-bold py-6">Need an<br /><span className="text-trueblue text-shadow-lg">Electrician?</span></h1>
                         <p className="text-white text-xl lg:text-xl transition-all">We are a locally owned and operated business servicing the Bay of Plenty Region, specialising in heavy industrial, industrial and commercial electrical.  Whether your job is big or small we provide the solutions to meet your needs.  We take pride in providing top quality service and workmanship to every single client.</p>

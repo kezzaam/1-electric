@@ -7,6 +7,7 @@ import "yet-another-react-lightbox/styles.css"
 import { images, CustomImage } from "./images"
 import CTA2 from "./CTA2"
 import Testimonials from "./Testimonials"
+import Mount from "./Mount"
 
 
 type FilterButton = {
@@ -56,8 +57,7 @@ export default function App() {
 
   return (
     <>
-      <div className="flex pt-[95px] bg-cover w-auto h-[55vh] bg-[url('/bayofplenty.jpg')]">
-      </div>
+    <Mount />
       <main className="flex flex-col items-center justify-center p-6 lg:px-24 lg:py-12 snap-y">
         <section className="flex flex-col items-center text-center snap-center space-y-10">
 
