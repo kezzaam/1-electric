@@ -1,6 +1,7 @@
 import CTA from '@/components/CTA';
 import Testimonials from '@/components/Testimonials';
 import Mount from './Mount';
+import Link from 'next/link';
 
 export default function Terms() {
   return (
@@ -16,7 +17,14 @@ export default function Terms() {
               <br /><br />
               We collect various types of personal information, including but not limited to: name, contact information, location, and site/job-specific details. This information is utilized to complete electrical projects and may be shared with other tradespeople involved in a project.
               <br /><br />
-              You have the right to request a copy of your personal information held by us and request corrections if necessary. For inquiries or corrections, please contact us at admin@1electric.nz or call 022 457 1594.
+              You have the right to request a copy of your personal information held by us and request corrections if necessary. For inquiries or corrections, please contact us at&nbsp; 
+              <Link href="mailto:admin@1electric.nz" className="text-trueblue hover:scale-105 hover:transition-all hover:text-metallicorange">
+                admin@1electric.nz
+              </Link>
+              &nbsp;or call&nbsp;
+              <Link href="tel:+64224571594" className="text-trueblue hover:scale-105 hover:transition-all hover:text-metallicorange">
+                022 457 1594
+              </Link>
             </p>
           </div>
 

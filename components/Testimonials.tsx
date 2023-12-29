@@ -34,13 +34,13 @@ const Testimonials = () => {
     <section className="p-4 lg:p-24 flex flex-col items-center justify-center snap-center bg-ghostwhite -mb-12">
       {/* heading, title, description */}
       <div>
-        <h4 className="text-sm uppercase text-trueblue tracking-wide my-4 text-center max-w-6xl">Testimonials</h4>
+        <h4 className="text-sm uppercase text-trueblue tracking-wide my-4 text-center">Testimonials</h4>
         <h2 className="text-3xl font-bold text-center mb-4">What our clients say</h2>
       </div>
       {/* divider */}
       <div className="w-36 h-1 mb-10 bg-trueblue"></div>
       {/* testimonial */}
-      <div className="text-center">
+      <div className="text-center max-w-6xl">
         <p className="text-xl italic mb-4">{testimonials[currentTestimonial].quote}</p>
         <div className="flex items-center justify-center">
           <div>

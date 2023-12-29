@@ -1,12 +1,12 @@
-import Image from 'next/image';
+import Link from 'next/link';
 
 const MountTown = () => {
   return (
     <div className="relative">
       <div className="flex pt-[95px] bg-cover w-auto h-[55vh] bg-[url('/mount-town.jpg')]">
         {/* Image Credit */}
-        <div className="absolute bottom-4 left-4 text-white text-xs px-2 py-1 rounded">
-          photo by <a className="underline" href="http://electricphotography.co.nz/" target="_blank" title="Visit Tim's website">Tim Walker</a>
+        <div className="absolute bottom-4 right-4 text-white bg-trueblue text-xs px-2 py-1 rounded">
+          photo by <Link className="underline" href="http://electricphotography.co.nz/" target="_blank" title="Visit Tim's website">Tim Walker</Link>
         </div>
       </div>
     </div>
