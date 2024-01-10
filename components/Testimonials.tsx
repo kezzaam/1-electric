@@ -10,10 +10,10 @@ const testimonials = [
     company: 'Tucker Bar and Eatery'
   },
   {
-    quote: "Suspendisse potenti. Donec posuere fermentum justo, id ornare nunc bibendum nec.",
-    name: "Jane Smith",
-    company: "XYZ Corporation"
-  },
+    quote: '"1 electric did our gym fitout in Omokoroa. \nWe absolutely loved working with them and would highly recommend.\n\nThe detail in their work is amazing, the lights in our main gym area are the focal point and had to be straight and level. They did an amazing job accomplishing this and the gym looks like a total new space with all their work. The finer detail with all the wires that are out of eyes way is amazing, they are all bound up nice and tidy. We had a time constraint and they smashed out this job within this time even doing some late shifts to make sure it is done.\n\nWe are super thankful and we highly recommend 1 electric as you will get great detailed work on time."',
+    name: 'Vance and Ash',
+    company: 'Common Ground Gym Omokoroa'
+  }  
 ]
 
 const Testimonials = () => {
@@ -25,7 +25,7 @@ const Testimonials = () => {
       setCurrentTestimonial((prevTestimonial) =>
         prevTestimonial === testimonials.length - 1 ? 0 : prevTestimonial + 1
       )
-    }, 5000) // 5000 milliseconds (5 seconds)
+    }, 15000) // 15000 milliseconds (15 seconds)
     
     return () => clearInterval(interval)
   }, [])
