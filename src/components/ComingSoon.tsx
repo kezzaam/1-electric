@@ -3,23 +3,21 @@ import Credentials from "./Credentials";
 const ComingSoon = () => {
     return (
         <>
-            {/* Wrapper - Remove `overflow-hidden` to allow scrolling */}
             <div className="relative min-h-screen">
-                {/* Background Overlay (Gray Color) */}
-                <div className="absolute inset-0 bg-gray-900 z-[-2]"></div>
-
+                {/* Background Overlay*/}
+                <div className="absolute inset-0 bg-gray-900 z-[-1] opacity-70"></div>
                 {/* Background */}
-                <div
-                    className="absolute inset-0 z-[-1] w-full h-full overflow-hidden bg-cover bg-center sm:bg-[size:120%]"
-                    style={{
-                        backgroundImage: "url('/background.jpg')",
-                        backgroundRepeat: "no-repeat",
-                        mixBlendMode: "difference",
-                        opacity: 0.8, // Adjust transparency if needed
-                    }}
-                ></div>
+                <div className="absolute inset-0 z-[-2] overflow-hidden">
+                    <div
+                        className="w-full h-full bg-cover bg-center sm:bg-[size:120%]"
+                        style={{
+                            backgroundImage: "url('/background.webp')",
+                            backgroundRepeat: "no-repeat",
+                        }}
+                    ></div>
+                </div>
 
-                {/* Main Content - Allow scrolling on small screens */}
+                {/* Main Content */}
                 <main className="relative min-h-screen w-full flex flex-col sm:flex-col lg:flex-row items-center justify-center lg:text-left snap-center gap-12 px-6 pt-24 pb-6 overflow-auto">
                     <div className="flex h-full flex-col gap-8 max-w-2xl w-full">
                         <div>
@@ -38,9 +36,9 @@ const ComingSoon = () => {
                             </div>
                             <p className="text-center sm:text-left break-words">
                                 This website is under construction. Come back again soon, or phone{" "}
-                            <a href="tel:+64224571594" title="Call 022 457 1594">
-                                022 457 1594
-                            </a> for enquiries.
+                                <a href="tel:+64224571594" title="Call 022 457 1594">
+                                    022 457 1594
+                                </a> for enquiries.
                             </p>
                         </button>
 
@@ -57,6 +55,7 @@ const ComingSoon = () => {
                     </div>
                 </main>
             </div>
+
         </>
     );
 };
