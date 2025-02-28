@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Theme Variables */
+@theme {
+  --color-trueblue: #0273DD;
+  --color-trueblue2: #1643A2;
+  --color-beer: #FD8C22;
+  --color-iceberg: #72A3CE;
+  --color-philippinesilver: #B7B6B7;
+  --color-ghostwhite: #FBFAF9;
+  --color-deepkoamaru: #293F6A;
+  --color-yankeesblue: #1F2937;
+  --color-sunray: #E9BC5D;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--yankeesblue);
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Parallax Background */
+.parallax {
+  background-image: url("/background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .parallax {
+    background-size: 300%;
+  }
+}
