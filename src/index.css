@@ -13,31 +13,16 @@
   --color-sunray: #E9BC5D;
 }
 
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   color: var(--yankeesblue);
   background-color: white;
   font-family: 'Inter', sans-serif;
 }
 
-/* Parallax Background */
-.parallax {
-  background-image: url("/background.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+a {
+  color: var(--color-beer);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 640px) {
-  .parallax {
-    background-size: 300%;
-  }
+a:hover {
+  color: var(--color-trueblue);
 }
