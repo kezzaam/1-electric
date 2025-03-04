@@ -30,8 +30,8 @@ export default function About() {
                 photoCredit="Tim Walker"
                 photoLink="http://electricphotography.co.nz/"
             />
-            <main className="flex flex-col items-center justify-center p-6 lg:px-24 lg:py-12 snap-y">
-                <section className="flex flex-col items-center text-center snap-center space-y-10">
+            <section className="content">
+                <article>
                     {/* Heading, Title, Description */}
                     <div>
                         <h4 className="text-sm uppercase text-trueblue tracking-wide my-4">
@@ -138,8 +138,8 @@ export default function About() {
                             </section>
                         );
                     })}
-                </section>
-            </main>
+                </article>
+            </section>
 
             {/* Testimonials & CTA */}
             <Testimonials />

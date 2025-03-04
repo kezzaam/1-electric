@@ -35,6 +35,15 @@ body {
   scroll-snap-type: y mandatory;
 }
 
+article {
+  @apply flex flex-col items-center text-center snap-center space-y-10;
+}
+
+blockquote {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 .divider {
   width: 9rem;  
   height: 4px;   

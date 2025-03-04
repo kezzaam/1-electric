@@ -61,7 +61,7 @@ export default function Testimonials() {
         <MessageSquare className="text-trueblue w-12 h-12 mx-auto mb-4" />
 
         {/* Testimonial Quote */}
-        <blockquote className="text-xl italic mb-4">
+        <blockquote className="text-xl italic m-0">
           {testimonials[currentTestimonial].quote.split("\n").map((line, i) => (
             <p key={i} className="mb-2">{line}</p>
           ))}

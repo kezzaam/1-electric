@@ -8,7 +8,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 // Toggle maintenance mode
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 
 export default function App() {
   return (

@@ -60,8 +60,8 @@ export default function Services() {
 
 
       {/* Services Overview */}
-      <main className="flex flex-col items-center justify-center p-6 lg:p-24 snap-y">
-        <section className="text-center snap-center space-y-10">
+      <section className="content">
+        <article>
           <div>
             <h4 className="text-sm uppercase text-trueblue tracking-wide my-4">
               What We Do
@@ -78,8 +78,8 @@ export default function Services() {
             </p>
           </div>
           <div className="divider"></div>
-        </section>
-      </main>
+        </article>
+      </section>
 
       {/* Service Sections */}
       {services.map((service, index) => (
