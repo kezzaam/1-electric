@@ -9,6 +9,7 @@ import TermsPage from "./pages/TermsPage";
 import ComingSoon from "./components/ComingSoon";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToAnchor from "./components/ScrollToAnchor";
 
 // Toggle maintenance mode
 const MAINTENANCE_MODE = false;
@@ -16,6 +17,7 @@ const MAINTENANCE_MODE = false;
 export default function App() {
   return (
     <Router>
+      <ScrollToAnchor />
       {MAINTENANCE_MODE ? (
         // TODO: Coming Soon should be switched with a Maintenance component
         <ComingSoon />

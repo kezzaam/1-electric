@@ -21,9 +21,24 @@ export default function ContactForm() {
         projectDescription?: string;
     }
 
-    const onSubmit = (data: FormData) => {
-        console.log("Form Data:", data);
-        setIsSubmitted(true);
+    const onSubmit = async (data: FormData) => {
+        try {
+            const response = await fetch("https://1electric.nz/form-handler.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(data as Record<string, string>).toString(),
+            });
+
+            const result = await response.json();
+            if (result.status === "success") {
+                setIsSubmitted(true);
+            } else {
+                alert(result.message);
+            }
+        } catch (error) {
+            console.error("Submission error:", error);
+            alert("Something went wrong, please try again.");
+        }
     };
 
     // Common Styles
