@@ -58,3 +58,12 @@ a.textlink {
 a.textlink:hover {
   color: var(--color-trueblue);
 }
+
+/* Make thumbnails square */
+.custom-thumbnail-gallery .image-gallery-thumbnail img {
+  width: 100px !important; /* Set square width */
+  height: 100px !important; /* Set square height */
+  object-fit: cover !important; /* Crop image to fill square */
+  border-radius: 4px; /* Optional: Add rounded corners */
+}
+

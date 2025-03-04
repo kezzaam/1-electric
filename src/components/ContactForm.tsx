@@ -27,7 +27,7 @@ export default function ContactForm() {
     };
 
     // Common Styles
-    const sectionStyle = "flex flex-col min-w-[50vw] gap-4 text-xl sm:p-6 lg:p-12";
+    const sectionStyle = "flex flex-col min-w-[50vw] gap-4 text-xl p-12";
     const buttonStyle =
         "bg-trueblue hover:bg-metallicorange hover:scale-101 transition-all text-white font-bold p-4 rounded focus:outline-none focus:ring-2 focus:ring-white focus:bg-metallicorange cursor-pointer";
     const paginationStyle =

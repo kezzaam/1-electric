@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import GalleryPage from "./pages/GalleryPage";
 import ComingSoon from "./components/ComingSoon";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -25,6 +26,7 @@ export default function App() {
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/gallery" element={<GalleryPage />} />
             </Routes>
           </main>
           <Footer />
