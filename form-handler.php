@@ -1,5 +1,18 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Load reCAPTCHA Secret Key from Plesk environment variables
+    $recaptchaSecret = getenv("RECAPTCHA_SECRET_KEY");
+    $recaptchaToken = $_POST["recaptchaToken"];
+
+    // Verify reCAPTCHA token with Google
+    $recaptchaResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaToken");
+    $recaptchaData = json_decode($recaptchaResponse);
+
+    if (!$recaptchaData->success) {
+        echo json_encode(["status" => "error", "message" => "reCAPTCHA verification failed."]);
+        exit;
+    }
+
     // Sanitize input
     $name = htmlspecialchars($_POST["name"]);
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);

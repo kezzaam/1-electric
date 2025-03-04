@@ -1,32 +1,35 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { CheckCircle } from "react-feather";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
     const { register, handleSubmit, formState: { errors }, setValue } = useForm();
     const [step, setStep] = useState(1);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
-    // Navigation functions
-    const nextStep = () => setStep(step + 1);
-    const prevStep = () => setStep(step - 1);
+    // Handle reCAPTCHA verification
+    const handleRecaptcha = (token: string | null) => {
+        setRecaptchaToken(token);
+    };
 
-    interface FormData {
-        name?: string;
-        email?: string;
-        subject?: string;
-        message?: string;
-        heardAboutUs?: string;
-        serviceType?: string;
-        projectDescription?: string;
-    }
+    const onSubmit = async (data: Record<string, string>) => {
+        console.log("reCAPTCHA Site Key:", import.meta.env.VITE_RECAPTCHA_SITE_KEY);
+        console.log("Form Data:", data);
+        if (!recaptchaToken) {
+            alert("Please complete the reCAPTCHA before submitting.");
+            return;
+        }
 
-    const onSubmit = async (data: FormData) => {
         try {
             const response = await fetch("https://1electric.nz/form-handler.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(data as Record<string, string>).toString(),
+                body: new URLSearchParams({
+                    ...data,
+                    recaptchaToken // Add reCAPTCHA token to request
+                }).toString(),
             });
 
             const result = await response.json();
@@ -41,10 +44,16 @@ export default function ContactForm() {
         }
     };
 
+    // Navigation functions
+    const nextStep = () => setStep(step + 1);
+    const prevStep = () => setStep(step - 1);
+
     // Common Styles
     const sectionStyle = "flex flex-col min-w-[50vw] gap-4 text-xl p-12";
     const buttonStyle =
         "bg-trueblue hover:bg-metallicorange hover:scale-101 transition-all text-white font-bold p-4 rounded focus:outline-none focus:ring-2 focus:ring-white focus:bg-metallicorange cursor-pointer";
+    const submitButtonStyle =
+        "bg-trueblue2 hover:bg-deepkoamaru hover:scale-101 transition-all text-white font-bold p-4 rounded focus:outline-none focus:ring-2 cursor-pointer";
     const paginationStyle =
         "text-trueblue font-bold hover:text-metallicorange hover:scale-101 transition-all focus:outline-none rounded-lg px-4 focus:ring-2 focus:ring-metallicorange cursor-pointer";
     const errorStyle = "text-red-500 text-sm mt-1";
@@ -67,7 +76,6 @@ export default function ContactForm() {
             <div className="flex justify-between mt-4">
                 {showPrev && <button onClick={prevStep} className={paginationStyle} aria-label="Go to previous step">Previous</button>}
                 {showNext && !submit && <button onClick={nextStep} className={paginationStyle} aria-label="Go to next step">Next</button>}
-                {submit && <button type="submit" className={buttonStyle} aria-label="Submit the form">Submit</button>}
             </div>
         </div>
     );
@@ -123,7 +131,28 @@ export default function ContactForm() {
                             {option}
                         </button>
                     ))}
-                    {errors.heardAboutUs && typeof errors.heardAboutUs.message === 'string' && <p className={errorStyle}>{errors.heardAboutUs.message}</p>}
+                    {/* Display reCAPTCHA before Submit */}
+                    <div className="recaptcha">
+                        <ReCAPTCHA
+                            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY as string}
+                            onChange={handleRecaptcha}
+                        />
+                    </div>
+
+                    {/* Submit Button - Disabled Until reCAPTCHA is Completed */}
+                    <button
+                        type="submit"
+                        className={submitButtonStyle}
+                        disabled={!recaptchaToken}
+                        aria-disabled={!recaptchaToken}
+                        aria-label="Submit the form"
+                    >
+                        Submit
+                    </button>
+
+                    {errors.heardAboutUs && typeof errors.heardAboutUs.message === 'string' && (
+                        <p className={errorStyle}>{errors.heardAboutUs.message}</p>
+                    )}
                 </FormStep>
             )}
 
@@ -187,10 +216,31 @@ export default function ContactForm() {
                             {option}
                         </button>
                     ))}
-                    {errors.heardAboutUs && typeof errors.heardAboutUs.message === 'string' && <p className={errorStyle}>{errors.heardAboutUs.message}</p>}
+
+                    {/* Display reCAPTCHA before Submit */}
+                    <div className="recaptcha">
+                        <ReCAPTCHA
+                            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY as string}
+                            onChange={handleRecaptcha}
+                        />
+                    </div>
+
+                    {/* Submit Button - Disabled Until reCAPTCHA is Completed */}
+                    <button
+                        type="submit"
+                        className={submitButtonStyle}
+                        disabled={!recaptchaToken}
+                        aria-disabled={!recaptchaToken}
+                        aria-label="Submit the form"
+                    >
+                        Submit
+                    </button>
+
+                    {errors.heardAboutUs && typeof errors.heardAboutUs.message === 'string' && (
+                        <p className={errorStyle}>{errors.heardAboutUs.message}</p>
+                    )}
                 </FormStep>
             )}
-
         </form>
     );
 }

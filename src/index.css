@@ -16,59 +16,46 @@
 }
 
 body {
-  color: var(--yankeesblue);
-  background-color: white;
+  @apply text-[var(--color-yankeesblue)] bg-white;
   font-family: 'Inter', sans-serif;
 }
 
+/* Main Content */
 .main-content {
-  min-height: calc(100vh - 172px);
-  /* subtract footer height */
-  padding-top: 96px;
-  /* fixed navbar allowance */
+  @apply min-h-[calc(100vh-172px)] pt-24; /* 96px navbar allowance */
 }
 
+/* Content Container */
 .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 5vw;
-  scroll-snap-type: y mandatory;
+  @apply flex flex-col items-center justify-center p-[5vw] snap-y;
 }
 
+/* Article Styling */
 article {
   @apply flex flex-col items-center text-center snap-center space-y-10;
 }
 
+/* Blockquote Reset */
 blockquote {
-  margin-block-start: 0;
-  margin-block-end: 0;
+  @apply m-0;
 }
 
+/* Divider Styling */
 .divider {
-  width: 9rem;
-  height: 4px;
-  background-color: var(--color-trueblue);
-  margin: 0 auto 2.5rem;
+  @apply w-36 h-1 bg-[var(--color-trueblue)] mx-auto mb-10;
 }
 
+/* Text Link */
 a.textlink {
-  color: var(--color-beer);
+  @apply text-[var(--color-beer)] hover:text-[var(--color-trueblue)];
 }
 
-a.textlink:hover {
-  color: var(--color-trueblue);
-}
-
-/* Make thumbnails square */
+/* Custom Thumbnail Gallery */
 .custom-thumbnail-gallery .image-gallery-thumbnail img {
-  width: 100px !important;
-  /* Set square width */
-  height: 100px !important;
-  /* Set square height */
-  object-fit: cover !important;
-  /* Crop image to fill square */
-  border-radius: 4px;
-  /* Optional: Add rounded corners */
+  @apply w-[100px] h-[100px] object-cover rounded-md cursor-pointer;
+}
+
+/* Recaptcha */
+.recaptcha {
+  @apply w-full flex justify-center;
 }
