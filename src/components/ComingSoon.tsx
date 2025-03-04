@@ -36,7 +36,7 @@ const ComingSoon = () => {
                             </div>
                             <p className="text-center sm:text-left break-words">
                                 This website is under construction. Come back again soon, or phone{" "}
-                                <a href="tel:+64224571594" title="Call 022 457 1594">
+                                <a className="textlink" href="tel:+64224571594" title="Call 022 457 1594">
                                     022 457 1594
                                 </a> for enquiries.
                             </p>

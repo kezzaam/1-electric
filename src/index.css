@@ -1,9 +1,11 @@
 @import "tailwindcss";
+@import 'leaflet/dist/leaflet.css';
 
 /* Theme Variables */
 @theme {
   --color-trueblue: #0273DD;
   --color-trueblue2: #1643A2;
+  --color-metallicorange: #DD6C02;
   --color-beer: #FD8C22;
   --color-iceberg: #72A3CE;
   --color-philippinesilver: #B7B6B7;
@@ -19,10 +21,31 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-a {
+.main-content {
+  min-height: calc(100vh - 172px); /* subtract footer height */
+  padding-top: 96px; /* fixed navbar allowance */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw;
+  scroll-snap-type: y mandatory;
+}
+
+.divider {
+  width: 9rem;  
+  height: 4px;   
+  background-color: var(--color-trueblue);
+  margin: 0 auto 2.5rem; 
+}
+
+a.textlink {
   color: var(--color-beer);
 }
 
-a:hover {
+a.textlink:hover {
   color: var(--color-trueblue);
 }
