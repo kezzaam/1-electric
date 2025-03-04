@@ -4,6 +4,7 @@ import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import GalleryPage from "./pages/GalleryPage";
+import JoinPage from "./pages/JoinPage";
 import ComingSoon from "./components/ComingSoon";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -27,6 +28,7 @@ export default function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/join" element={<JoinPage />} />
             </Routes>
           </main>
           <Footer />

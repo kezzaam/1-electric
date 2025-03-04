@@ -38,6 +38,8 @@ export default function About() {
                             We are 1 Electric
                         </h4>
                         <h2 className="text-3xl font-bold text-center mb-4">About Us</h2>
+                        {/* Divider */}
+                        <div className="divider"></div>
                         <div className="text-xl mb-8 max-w-4xl space-y-6">
                             <p>1 Electric is owned and operated by Shane Elliott, a registered electrician.</p>
                             <p>Shane grew up in the Waikato on a dairy farm and has the great Kiwi Number 8 wire can-do attitude, ingenuity, and resourcefulness.</p>
@@ -47,9 +49,6 @@ export default function About() {
                             <p>We are a member of ECANZ (Electrical Contractors Association of New Zealand) and are certified Master Electricians. This means you can be assured of the quality of our work and that we are experts in what we do. All our work is guaranteed.</p>
                         </div>
                     </div>
-
-                    {/* Divider */}
-                    <div className="w-36 h-1 mb-10 bg-trueblue"></div>
 
                     {/* Heading */}
                     <h2 className="text-3xl font-bold text-center mb-4"></h2>

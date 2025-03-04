@@ -3,13 +3,13 @@ import { Phone, Menu, XCircle, ChevronRight, ChevronDown } from "react-feather";
 import { useState } from "react";
 
 export default function Header() {
-    const inline = "flex items-center space-x-6 text-lg";
-    const navLink =
-      "px-2 py-1 rounded tracking-wide transition-all hover:font-semibold text-white hover:text-shadow-sm"; 
-    const dropdownLink =
-      "text-philippinesilver px-2 py-1 tracking-wide transition-all hover:border-l-4 hover:border-metallicorange hover:text-metallicorange";
-    const mobileDropdownLink =
-      "hover:border-l-4 hover:border-metallicorange hover:pl-1 hover:text-deepkoamaru hover:transition-all";
+  const inline = "flex items-center space-x-6 text-lg";
+  const navLink =
+    "px-2 py-1 rounded tracking-wide transition-all hover:font-semibold text-white hover:text-shadow-sm";
+  const dropdownLink =
+    "text-philippinesilver px-2 py-1 tracking-wide transition-all hover:border-l-4 hover:border-metallicorange hover:text-metallicorange";
+  const mobileDropdownLink =
+    "hover:border-l-4 hover:border-metallicorange hover:pl-1 hover:text-deepkoamaru hover:transition-all";
 
   // State management
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

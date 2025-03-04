@@ -45,18 +45,18 @@ const services = [
 ];
 
 export default function Services() {
-    
+
   return (
     <>
       {/* Hero Background */}
       <div className="w-full bg-cover bg-center bg-no-repeat"
-     style={{
-       backgroundImage: "url('/services-banner.webp')",
-       height: "33vw", // 3:1 ratio based on viewport width
-       minHeight: "120px", // Prevents too small images on narrow screens
-       maxHeight: "300px", // Limits excessive scaling on wider screens
-     }}
-></div>
+        style={{
+          backgroundImage: "url('/services-banner.webp')",
+          height: "33vw", // 3:1 ratio based on viewport width
+          minHeight: "120px", // Prevents too small images on narrow screens
+          maxHeight: "300px", // Limits excessive scaling on wider screens
+        }}
+      ></div>
 
 
       {/* Services Overview */}
@@ -67,17 +67,17 @@ export default function Services() {
               What We Do
             </h4>
             <h2 className="text-3xl font-bold mb-4">Electrical Services</h2>
+            <div className="divider"></div>
             <p className="text-xl mb-8 max-w-2xl">
               We are a locally owned and operated business servicing the Bay of
               Plenty Region, specialising in heavy industrial, industrial, and
               commercial electrical.
-              <br />
+              <br /><br />
               With a key group of experienced and qualified electricians, our
               focus is dependable innovation and robust electrical installations
               in the industrial and commercial sector.
             </p>
           </div>
-          <div className="divider"></div>
         </article>
       </section>
 
@@ -86,9 +86,8 @@ export default function Services() {
         <section
           key={index}
           id={service.heading.toLowerCase().replace(" ", "-")}
-          className={`${
-            index % 2 === 0 ? "bg-ghostwhite" : "bg-deepkoamaru text-white"
-          } flex flex-col lg:flex-row shadow hover:scale-101 hover:transition-all snap-center scroll-mt-24 items-center`}
+          className={`${index % 2 === 0 ? "bg-ghostwhite" : "bg-deepkoamaru text-white"
+            } flex flex-col lg:flex-row shadow hover:scale-101 hover:transition-all snap-center scroll-mt-24 items-center`}
         >
           {/* Image Column */}
           <div className={`lg:w-1/2 ${index % 2 === 0 ? "lg:order-2" : "lg:order-1"}`}>
@@ -101,9 +100,8 @@ export default function Services() {
 
           {/* Info Column */}
           <div
-            className={`lg:w-1/2 ${
-              index % 2 === 0 ? "lg:order-1" : "lg:order-2"
-            } flex flex-col p-8 lg:p-24`}
+            className={`lg:w-1/2 ${index % 2 === 0 ? "lg:order-1" : "lg:order-2"
+              } flex flex-col p-8 lg:p-24`}
           >
             <h3 className="text-2xl font-semibold mb-2">{service.heading}</h3>
             <p className="mb-4">{service.description}</p>

@@ -50,16 +50,16 @@ export default function Gallery() {
             />
 
             {/* Main Gallery Section */}
-            <main className="flex flex-col items-center justify-center p-6 lg:px-24 lg:py-12">
-                <section className="flex flex-col items-center text-center space-y-10">
-                    {/* Heading & Title */}
+            <section className="content">
+                <article>
                     <div>
+                        {/* Heading & Title */}
                         <h4 className="text-sm uppercase text-trueblue tracking-wide my-4">Gallery</h4>
                         <h2 className="text-3xl font-bold text-center mb-4">Our Work</h2>
-                    </div>
 
-                    {/* Divider */}
-                    <div className="w-36 h-1 mb-10 bg-trueblue"></div>
+                        {/* Divider */}
+                        <div className="divider"></div>
+                    </div>
 
                     {/* Filter Buttons */}
                     <div className="flex flex-wrap justify-center gap-2">
@@ -67,8 +67,8 @@ export default function Gallery() {
                             <button
                                 key={tag}
                                 className={`px-4 py-2 text-sm font-bold uppercase rounded-md transition-all cursor-pointer ${selectedTag === tag
-                                        ? "bg-metallicorange text-white"
-                                        : "bg-gray-200 text-trueblue hover:bg-trueblue hover:text-white"
+                                    ? "bg-metallicorange text-white"
+                                    : "bg-gray-200 text-trueblue hover:bg-trueblue hover:text-white"
                                     }`}
                                 onClick={() => setSelectedTag(tag)}
                             >
@@ -76,8 +76,8 @@ export default function Gallery() {
                             </button>
                         ))}
                     </div>
-                </section>
-            </main>
+                </article>
+            </section>
 
             {/* Gallery Section */}
             <div className="px-4">
