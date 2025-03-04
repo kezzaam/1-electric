@@ -4,16 +4,15 @@ Welcome to the repository for the **1 Electric** website.
 This project is currently under development.
 
 ## Live Preview
-[Coming Soon](https://1electric.nz)  
-*(Link will be updated once deployed)*
+[1 Electric](https://1electric.nz)
 
-## 🔧 Tech Stack
+## Tech Stack
 - **Framework:** React + Vite
 - **Styling:** Tailwind CSS
 - **Language:** TypeScript
 - **Deployment:** GitHub → Plesk (Node.js App)
 
-## 🛠️ Development Setup
+## Development Setup
 1. Clone the repository:
    ```sh
    git clone https://github.com/kezzaam/1electric.git
