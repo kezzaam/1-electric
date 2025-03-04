@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import CTA from "./CTA";
 import { CheckCircle } from "react-feather";
 import Testimonials from "./Testimonials";
+import PageHeroImage from "./PageHeroImage";
 
 // Service data
 const services = [
@@ -48,15 +49,9 @@ export default function Services() {
 
   return (
     <>
-      {/* Hero Background */}
-      <div className="w-full bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/services-banner.webp')",
-          height: "33vw", // 3:1 ratio based on viewport width
-          minHeight: "120px", // Prevents too small images on narrow screens
-          maxHeight: "300px", // Limits excessive scaling on wider screens
-        }}
-      ></div>
+      <PageHeroImage
+                imageUrl="/services-banner.webp"
+            />
 
 
       {/* Services Overview */}

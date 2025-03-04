@@ -5,6 +5,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import GalleryPage from "./pages/GalleryPage";
 import JoinPage from "./pages/JoinPage";
+import TermsPage from "./pages/TermsPage";
 import ComingSoon from "./components/ComingSoon";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -29,6 +30,7 @@ export default function App() {
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/join" element={<JoinPage />} />
+              <Route path="/terms" element={<TermsPage />} />
             </Routes>
           </main>
           <Footer />

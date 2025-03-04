@@ -22,6 +22,8 @@ export default function Contact() {
                             Keen to discuss your next project?
                         </h4>
                         <h2 className="text-3xl font-bold text-center mb-4">Get in Touch</h2>
+                        {/* Divider */}
+                        <div className="divider"></div>
                         <p className="text-xl text-center mb-8 max-w-2xl">
                             We'd love to hear from you!
                             <br />
