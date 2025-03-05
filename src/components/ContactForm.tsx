@@ -1,37 +1,47 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { CheckCircle } from "react-feather";
-import ReCAPTCHA from "react-google-recaptcha";
+
+declare global {
+    interface Window {
+        grecaptcha: {
+            ready: (callback: () => void) => void;
+            execute: (siteKey: string, options: { action: string }) => Promise<string>;
+        };
+    }
+}
 
 export default function ContactForm() {
     const { register, handleSubmit, formState: { errors }, setValue } = useForm();
     const [step, setStep] = useState(1);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
-    // Handle reCAPTCHA verification
-    const handleRecaptcha = (token: string | null) => {
-        setRecaptchaToken(token);
-    };
-
+    // onSubmit handles obtaining the reCAPTCHA v3 token on demand.
     const onSubmit = async (data: Record<string, string>) => {
-        console.log("reCAPTCHA Site Key:", import.meta.env.VITE_RECAPTCHA_SITE_KEY);
-        console.log("Form Data:", data);
-        if (!recaptchaToken) {
-            alert("Please complete the reCAPTCHA before submitting.");
-            return;
-        }
-
         try {
-            const response = await fetch("https://1electric.nz/form-handler.php", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams({
-                    ...data,
-                    recaptchaToken // Add reCAPTCHA token to request
-                }).toString(),
+            // Execute reCAPTCHA v3 and get a token.
+            const token = await new Promise<string>((resolve, reject) => {
+                if (!window.grecaptcha) {
+                    return reject("reCAPTCHA not loaded");
+                }
+                window.grecaptcha.ready(() => {
+                    window.grecaptcha
+                        .execute(import.meta.env.VITE_RECAPTCHA_SITE_KEY as string, { action: "contact_form" })
+                        .then(resolve)
+                        .catch(reject);
+                });
             });
+            console.log("reCAPTCHA token:", token);
 
+            // Submit the form along with the token.
+            const response = await fetch("https://1electric.nz/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    ...data,
+                    recaptchaToken: token,
+                }),
+            });
             const result = await response.json();
             if (result.status === "success") {
                 setIsSubmitted(true);
@@ -131,24 +141,16 @@ export default function ContactForm() {
                             {option}
                         </button>
                     ))}
-                    {/* Display reCAPTCHA before Submit */}
-                    <div className="recaptcha">
-                        <ReCAPTCHA
-                            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY as string}
-                            onChange={handleRecaptcha}
-                        />
-                    </div>
 
                     {/* Submit Button - Disabled Until reCAPTCHA is Completed */}
                     <button
                         type="submit"
                         className={submitButtonStyle}
-                        disabled={!recaptchaToken}
-                        aria-disabled={!recaptchaToken}
                         aria-label="Submit the form"
                     >
                         Submit
                     </button>
+
 
                     {errors.heardAboutUs && typeof errors.heardAboutUs.message === 'string' && (
                         <p className={errorStyle}>{errors.heardAboutUs.message}</p>
@@ -217,20 +219,10 @@ export default function ContactForm() {
                         </button>
                     ))}
 
-                    {/* Display reCAPTCHA before Submit */}
-                    <div className="recaptcha">
-                        <ReCAPTCHA
-                            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY as string}
-                            onChange={handleRecaptcha}
-                        />
-                    </div>
-
                     {/* Submit Button - Disabled Until reCAPTCHA is Completed */}
                     <button
                         type="submit"
                         className={submitButtonStyle}
-                        disabled={!recaptchaToken}
-                        aria-disabled={!recaptchaToken}
                         aria-label="Submit the form"
                     >
                         Submit
