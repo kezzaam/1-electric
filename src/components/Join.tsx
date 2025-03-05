@@ -9,7 +9,7 @@ export default function Join() {
         <>
             {/* Hero Section */}
             <PageHeroImage
-                imageUrl="/mount.jpg"
+                imageUrl="/mount-town.webp"
                 photoCredit="Tim Walker"
                 photoLink="http://electricphotography.co.nz/"
             />

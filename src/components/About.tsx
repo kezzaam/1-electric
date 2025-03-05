@@ -26,7 +26,7 @@ export default function About() {
     return (
         <>
             <PageHeroImage
-                imageUrl="/mount.jpg"
+                imageUrl="/mount.webp"
                 photoCredit="Tim Walker"
                 photoLink="http://electricphotography.co.nz/"
             />

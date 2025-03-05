@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <>
             <PageHeroImage
-                imageUrl="/mount-town.jpg"
+                imageUrl="/plummers-point.webp"
                 photoCredit="Tim Walker"
                 photoLink="http://electricphotography.co.nz/"
             />
