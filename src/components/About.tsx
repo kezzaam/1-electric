@@ -19,7 +19,7 @@ export default function About() {
                 "Great communication",
                 "Excellent service",
             ],
-            email: "shane@1electric.com",
+            email: "admin@1electric.nz",
         },
     ];
 
