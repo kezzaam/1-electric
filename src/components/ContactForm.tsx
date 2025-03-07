@@ -19,11 +19,16 @@ export default function ContactForm() {
     // Form submission handled by Web3Forms
     const formData = {
       ...data,
-      access_key: "", // Removed temporarily; should cause a 404
+      access_key: "", // Intentionally empty for testing
       subject: "New Contact Form Submission",
     };
   
     try {
+      // Optionally force an error for testing if no access key is provided:
+      if (!formData.access_key) {
+        throw new Error("Access key is missing");
+      }
+  
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -33,7 +38,7 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
   
-      // If response is not OK (e.g., 404), throw an error to be caught below.
+      console.log("HTTP Status:", response.status);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -44,7 +49,8 @@ export default function ContactForm() {
       if (result.success) {
         setIsSubmitted(true);
       } else {
-        alert("Submission failed. Please try again.");
+        // Optionally display the error message from the API:
+        alert(`Submission failed: ${result.message || "Please try again."}`);
       }
     } catch (error) {
       console.error("Submission Error:", error);
