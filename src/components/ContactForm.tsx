@@ -15,8 +15,37 @@ export default function ContactForm() {
 
   const onSubmit = async (data: Record<string, string>) => {
     console.log("Form Data:", data);
-    setIsSubmitted(true);
-  };
+  
+    // form submission handled by Web3Forms
+    const formData = {
+      ...data,
+      access_key: "",
+      subject: "New Contact Form Submission" 
+    };
+  
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const result = await response.json();
+      console.log("Web3Forms Response:", result);
+      
+      if (result.success) {
+        setIsSubmitted(true);
+      } else {
+        alert("Submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission Error:", error);
+      alert("An error occurred. Please try again.");
+    }
+  };  
 
   // Use trigger to validate only the current step's fields.
   const handleNext = async (fields: string[] = []) => {
