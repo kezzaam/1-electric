@@ -16,11 +16,11 @@ export default function ContactForm() {
   const onSubmit = async (data: Record<string, string>) => {
     console.log("Form Data:", data);
   
-    // form submission handled by Web3Forms
+    // Form submission handled by Web3Forms
     const formData = {
       ...data,
-      access_key: "",
-      subject: "New Contact Form Submission" 
+      access_key: "", // Removed temporarily; should cause a 404
+      subject: "New Contact Form Submission",
     };
   
     try {
@@ -32,10 +32,15 @@ export default function ContactForm() {
         },
         body: JSON.stringify(formData),
       });
-      
+  
+      // If response is not OK (e.g., 404), throw an error to be caught below.
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
       const result = await response.json();
       console.log("Web3Forms Response:", result);
-      
+  
       if (result.success) {
         setIsSubmitted(true);
       } else {
@@ -45,7 +50,7 @@ export default function ContactForm() {
       console.error("Submission Error:", error);
       alert("An error occurred. Please try again.");
     }
-  };  
+  };   
 
   // Use trigger to validate only the current step's fields.
   const handleNext = async (fields: string[] = []) => {
