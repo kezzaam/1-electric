@@ -19,7 +19,7 @@ export default function ContactForm() {
     // Form submission handled by Web3Forms
     const formData = {
       ...data,
-      access_key: "", // Intentionally empty for testing
+      access_key: "c52d523b-78d1-44fc-a9fd-8a79c26ccab9",
       subject: "New Contact Form Submission",
     };
   
